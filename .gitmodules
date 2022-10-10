@@ -1,0 +1,4 @@
+[submodule "minirts"]
+	path = minirts
+	url = git@github.com:jwhj/minirts.git
+	branch = simple_ai
