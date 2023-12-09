@@ -65,6 +65,7 @@ cnt = 0
 
 
 def get_available_port():
+    return 8002
     sock = socket.socket()
     sock.bind(('', 0))
     _, port = sock.getsockname()
@@ -135,6 +136,13 @@ def start_game(
         print(buf)
         if buf.decode('utf-8') == 'Waiting for websocket client ...\n':
             break
+    def f():
+        while True:
+            buf = p.stdout.readline().decode('utf-8')
+            if buf == '':
+                return
+            print(buf)
+    executor.submit(f)
     executor.submit(check_heartbeat, port, 10)
     return p
 

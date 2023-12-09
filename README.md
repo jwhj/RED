@@ -10,8 +10,16 @@ We provide a docker image `jwhj/red:v1.0.0`.
 
 After pulling the image, start a container by
 ```
-docker run -it --gpus 1 --ipc=host jwhj/red:v1.0.0
+docker run -it --gpus 1 --ipc=host --network=host jwhj/red:v1.0.0
 ```
+
+# Update to Latest
+
+In the directory `/workspace/RED`, run
+```
+git pull
+```
+to get the latest code.
 
 # Downloading Dataset and Model Checkpoints
 
