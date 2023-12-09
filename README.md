@@ -17,6 +17,7 @@ docker run -it --gpus 1 --ipc=host --network=host jwhj/red:v1.0.0
 
 In the directory `/workspace/RED`, run
 ```
+git remote set-url origin https://github.com/jwhj/RED.git
 git pull
 ```
 to get the latest code.
